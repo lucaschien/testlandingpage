@@ -1,0 +1,208 @@
+body {
+  overscroll-behavior: none; /*停止手機網頁的scroll彈簧效果*/
+  font-family: Microsoft JhengHei;
+}
+h1 {
+  height: 0;
+  overflow: hidden;
+}
+.wrapper {
+  min-width: 375px;
+  min-height: 100vh;
+  background-color: #efefef;
+}
+.content {
+  width: 100%;
+  min-height: 100vh;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* 主介面大區塊 */
+.key-view {
+  position: relative;
+  background-color: #fff;
+  padding-bottom: 25px;
+  margin-bottom: 10px;
+}
+.key-view img {
+  width: 100%;
+}
+.key-view .user-info {
+  position: absolute;
+  bottom: -25px;
+  left: 30px;
+  right: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px 5px;
+  box-shadow: 0 0 10px #ccc;
+}
+.key-view .user-info span {
+  display: inline-block;
+  width: 49%;
+  text-align: center;
+  font-size: 18px;
+  color: #707070;
+}
+
+/* 內容大區塊 */
+.main-box {
+  background-color: #fff;
+  padding: 30px 0 20px 0;
+  min-height: 64vh;
+}
+
+/* 通用性區塊共用樣式設定 */
+.default-box {
+  padding: 5px 20px;
+  margin-bottom: 10px;
+}
+.default-box h3 {
+  border-left: 4px solid transparent;
+  padding: 0 0 0 10px;
+  margin-bottom: 10px;
+  font-size: 4vw;
+  color: #525252;
+}
+.default-box img {
+  width: 100%;
+}
+
+/* 每日任務 */
+.box-1 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.box-1 h3 {
+  border-left-color: #15c1ff;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.box-1 .scroll-box {
+  width: 100%;
+  padding-bottom: 10px;
+  overflow-x: auto;
+}
+.box-1 ul {
+  width: 115%;
+  padding-left: 20px;
+}
+
+/* 每日任務 icon */
+.default-task {
+  border-radius: 5%;
+  background-color: #ccc;
+  display: inline-block;
+  margin-right: 10px;
+  width: 140px;
+  height: 140px;
+  position: relative;
+  vertical-align: top;
+}
+.default-task a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 4.5vw;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 0 15px rgba(0,0,0,0.4);
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.default-task:after, .default-task:before {
+  content: '';
+  border-radius: 5%;
+  background-size: 70%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.4;
+}
+.default-task:before {
+  display: none;
+}
+
+/* 當 icon 是 coming soon 狀態 */
+.default-task.coming-soon:after {
+  opacity: 0.2;
+}
+.default-task.coming-soon:before {
+  background-color: #000;
+  opacity: 0.5;
+  display: block;
+} 
+/* 當 icon 是 完成狀態 */
+.default-task.complete:before {
+  background-image: url('../img/icon-02.png');
+  background-color: #000;
+  opacity: 0.5;
+  display: block;
+  z-index: 2;
+}
+
+.task-1 {
+  background: #FFE490; /* Old browsers */
+  background: -moz-linear-gradient(top,  #FFE490 0%, #FBBF91 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #FFE490 0%,#FBBF91 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #FFE490 0%,#FBBF91 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFE490', endColorstr='#FBBF91',GradientType=0 ); /* IE6-9 */
+}
+.task-1:after { background-image: url('../img/icon-01.png'); }
+.task-2 {
+  background: #FF92AE; /* Old browsers */
+  background: -moz-linear-gradient(top,  #FF92AE 0%, #FD5976 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #FF92AE 0%,#FD5976 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #FF92AE 0%,#FD5976 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF92AE', endColorstr='#FD5976',GradientType=0 ); /* IE6-9 */
+}
+.task-2:after { background-image: url('../img/icon-04.png'); }
+.task-3 {
+  background: #24CAD9; /* Old browsers */
+  background: -moz-linear-gradient(top,  #24CAD9 0%, #3667E0 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #24CAD9 0%,#3667E0 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #24CAD9 0%,#3667E0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#24CAD9', endColorstr='#3667E0',GradientType=0 ); /* IE6-9 */
+}
+.task-3:after { background-image: url('../img/icon-03.png'); }
+.task-4 {
+  background: #FFA477; /* Old browsers */
+  background: -moz-linear-gradient(top,  #FFA477 0%, #F55100 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #FFA477 0%,#F55100 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #FFA477 0%,#F55100 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFA477', endColorstr='#F55100',GradientType=0 ); /* IE6-9 */
+}
+.task-4:after { background-image: url('../img/icon-01.png'); }
+
+
+/* 幸福大轉盤 */
+.box-2 h3 {
+  border-left-color: #f3521e;
+}
+
+/* 幸運刮刮樂 */
+.box-3 h3 {
+  border-left-color: #fee453;
+}
+
+/* RWD */
+@media screen and (min-width: 640px) {
+  .default-box h3 {
+    font-size: 2vw;
+  }
+  .default-task a {
+    font-size: 3vw;
+  }
+}
