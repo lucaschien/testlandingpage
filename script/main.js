@@ -3,14 +3,6 @@ $(function() {
       $mainBox = $('.main-box'),
       $scrollUl = $('.box-1 ul');
 
-  /* 停止手機網頁的scroll彈簧效果 */
-  function stopMobileSpring() {
-    function bodyScroll (event) { 
-      event.preventDefault(); 
-    }
-    document.body.addEventListener('touchmove', bodyScroll, {passive: false});
-  }
-  
   /* 任務區塊的icon大小 */
   function taskIconSize () {
     var mainWidth = $mainBox.width(),
@@ -22,7 +14,6 @@ $(function() {
   }
   
   function init () {
-    stopMobileSpring();
     taskIconSize();
     window.addEventListener('resize', taskIconSize);
   }
